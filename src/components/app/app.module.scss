@@ -23,6 +23,8 @@ button::-moz-focus-inner {
   border: none;
 }
 
+$color: #f5f5f5;
+
 body {
   font:
     14px 'Helvetica Neue',
@@ -30,7 +32,7 @@ body {
     Arial,
     sans-serif;
   line-height: 1.4em;
-  background: #f5f5f5;
+  background: $color;
   color: #111111;
   min-width: 230px;
   max-width: 550px;
