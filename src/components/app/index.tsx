@@ -1,19 +1,10 @@
-// declare module '*.scss' {
-//   const css: { [key: string]: string }
-//   export default css
-// }
-
 import React from 'react'
 
-// import classNames from 'classnames'
-// import classes from './app.module.scss'
-
-// import AppHeader from '../app-header'
+import classes from './app.module.scss'
 
 export default function App() {
   return (
-    <section className={'todoapp'}>
-      {/* <section className={classes.todoapp}> */}
+    <section className={classes.todoapp}>
       <div>Hello world</div>
     </section>
   )

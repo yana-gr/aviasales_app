@@ -15,14 +15,15 @@
   ],
   "parserOptions": {
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "tsx": true
     },
     "ecmaVersion": 12,
     "sourceType": "module",
     "requireConfigFile": false,
     "babelOptions": {
       "parserOpts": {
-        "plugins": ["jsx"]
+        "plugins": ["jsx", "tsx"]
       }
     }
   },
@@ -55,12 +56,22 @@
     "no-plusplus": "off",
     "no-new": 0,
     "import/no-unresolved": [2, { "caseSensitive": false }],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "import/order": [
       2,
       {
         "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
         "newlines-between": "always"
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
       }
     ]
   },
