@@ -1,4 +1,5 @@
 $background-color--main: #f3f7fa;
+$font-color--main: #4a4a4a;
 
 html,
 body {
@@ -9,9 +10,17 @@ body {
 
 body {
   min-width: 320px;
-  margin: 0 auto;
+  margin: 50px 100px;
+  // margin: 0 auto;
   padding: 0;
   background-color: $background-color--main;
   font-family: 'Open Sans', sans-serif;
+  color: $font-color--main;
   overflow-x: hidden;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 30% 67%;
+  gap: 2.5%;
 }

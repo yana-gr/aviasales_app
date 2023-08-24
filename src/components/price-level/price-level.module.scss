@@ -1,0 +1,39 @@
+$font-color--main: #4a4a4a;
+$background-color--price: #fff;
+$secondary-colors-border: #dfe5ec;
+
+.price_level__button_wrapper {
+  display: flex;
+  justify-content: stretch;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+
+.price_level__button {
+  width: 33.333%;
+  color: $font-color--main;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  height: 50px;
+  background-color: $background-color--price;
+  border: 1px solid $secondary-colors-border;
+}
+
+.price_level__button:first-child {
+  border-radius: 8px 0 0 8px;
+  border-right: none;
+}
+
+.price_level__button:last-child {
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+}
