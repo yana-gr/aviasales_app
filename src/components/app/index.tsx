@@ -13,7 +13,7 @@ export default function App() {
       <AppHeader />
       <div className={classes.wrapper}>
         <Filter />
-        <div>
+        <div className={classes.main}>
           <PriceLevel />
           <TicketList />
         </div>

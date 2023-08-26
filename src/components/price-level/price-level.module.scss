@@ -1,8 +1,9 @@
 $font-color--main: #4a4a4a;
 $background-color--price: #fff;
 $secondary-colors-border: #dfe5ec;
+$frequently-used-primary-500: #2196f3;
 
-.price_level__button_wrapper {
+.price_level {
   display: flex;
   justify-content: stretch;
   text-align: center;
@@ -11,29 +12,41 @@ $secondary-colors-border: #dfe5ec;
   font-weight: 600;
   line-height: 20px;
   letter-spacing: 0.5px;
+
+  &__button {
+    width: 33.333%;
+    color: $font-color--main;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    height: 50px;
+    text-transform: uppercase;
+    background-color: $background-color--price;
+    border: 1px solid $secondary-colors-border;
+    cursor: pointer;
+
+    &__focus {
+      color: $background-color--price;
+      background-color: $frequently-used-primary-500;
+    }
+
+    &:first-child {
+      border-radius: 8px 0 0 8px;
+      border-right: none;
+    }
+
+    &:last-child {
+      border-left: none;
+      border-radius: 0 8px 8px 0;
+    }
+  }
 }
 
-.price_level__button {
-  width: 33.333%;
-  color: $font-color--main;
-  text-align: center;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 20px;
-  letter-spacing: 0.5px;
-  margin-bottom: 20px;
-  height: 50px;
-  background-color: $background-color--price;
-  border: 1px solid $secondary-colors-border;
-}
-
-.price_level__button:first-child {
-  border-radius: 8px 0 0 8px;
-  border-right: none;
-}
-
-.price_level__button:last-child {
-  border-left: none;
-  border-radius: 0 8px 8px 0;
+.focus {
+  color: $background-color--price;
+  background-color: $frequently-used-primary-500;
 }

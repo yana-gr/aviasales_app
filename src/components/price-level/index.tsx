@@ -4,15 +4,15 @@ import classes from './price-level.module.scss'
 
 export default function PriceLevel() {
   return (
-    <div className={classes.price_level__button_wrapper}>
-      <button type="button" className={classes.price_level__button}>
-        САМЫЙ ДЕШЕВЫЙ
+    <div className={classes.price_level}>
+      <button type="button" className={`${classes.price_level__button} ${classes.focus}`}>
+        Cамый дешевый
       </button>
       <button type="button" className={classes.price_level__button}>
-        САМЫЙ БЫСТРЫЙ
+        Самый быстрый
       </button>
       <button type="button" className={classes.price_level__button}>
-        ОПТИМАЛЬНЫЙ
+        Оптимальный
       </button>
     </div>
   )

@@ -1,9 +1,23 @@
-.ticket_list__list {
+$primary-colors-white: #fff;
+
+.ticket_list {
   display: grid;
   grid-template-columns: 100%;
   gap: 20px;
-}
 
-.header__logo {
-  height: 80px;
+  &__button {
+    height: 50px;
+    color: $primary-colors-white;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: none;
+    background-color: #2196f3;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }

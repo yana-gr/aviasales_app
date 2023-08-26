@@ -6,9 +6,11 @@ import classes from './ticket-list.module.scss'
 
 export default function TicketList() {
   return (
-    <div className={classes.ticket_list__list}>
+    <div className={classes.ticket_list}>
       <Ticket />
-      <button type="button">Показать еще 5 билетов</button>
+      <button type="button" className={classes.ticket_list__button}>
+        Показать еще 5 билетов
+      </button>
     </div>
   )
 }
