@@ -1,5 +1,5 @@
 {
-  "extends": "@tsconfig/node18/tsconfig.json",
+  // "extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
     "preserveConstEnums": true,
     "traceResolution": false,
@@ -10,8 +10,8 @@
     "jsx": "react",
     "allowJs": true,
     "moduleResolution": "node",
-    "target": "ES2022",
-    // "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ES6",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "commonjs",
     "outDir": "dist",
     "esModuleInterop": true,
