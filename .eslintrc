@@ -13,12 +13,16 @@
     "airbnb",
     "prettier"
   ],
+
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "project": "./tsconfig.json",
     "ecmaFeatures": {
       "jsx": true,
-      "tsx": true
+      "tsx": true,
+      "experimentalObjectRestSpread": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": 6,
     "sourceType": "module",
     "requireConfigFile": false,
     "babelOptions": {
@@ -27,7 +31,7 @@
       }
     }
   },
-  "parser": "@babel/eslint-parser",
+
   "plugins": ["react", "prettier", "import"],
   "rules": {
     "no-underscore-dangle": "off",
@@ -36,7 +40,8 @@
     "linebreak-style": [0, "unix"],
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
-    "no-param-reassign": "error",
+    "no-param-reassign": 0,
+    "no-await-in-loop": "off",
     "react/prefer-stateless-function": "off",
     "react/destructuring-assignment": "off",
     "jsx-a11y/no-autofocus": "off",
@@ -46,7 +51,14 @@
     "react/no-access-state-in-setstate": "off",
     "array-callback-return": "off",
     "react/sort-comp": "off",
+    "no-unused-vars": "off",
     "consistent-return": "off",
+    "no-shadow": [
+      "error",
+      {
+        "allow": ["PriceLevelEnum"]
+      }
+    ],
     "import/prefer-default-export": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": 0,

@@ -13,7 +13,6 @@ body {
 body {
   min-width: 320px;
   margin: 50px 100px;
-  // margin: 0 auto;
   padding: 0;
   background-color: $background-color--main;
   font-family: 'Open Sans', sans-serif;
@@ -36,6 +35,17 @@ body {
 
 .main {
   flex: 4 1 auto;
+}
+
+.error {
+  display: flex;
+  background-color: #f54759;
+  padding: 15px;
+  align-self: center;
+  text-align: center;
+  justify-content: space-around;
+  font-weight: 600;
+  color: $background-color--main;
 }
 
 @media (max-width: 767px) {

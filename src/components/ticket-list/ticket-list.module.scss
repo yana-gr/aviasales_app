@@ -21,3 +21,14 @@ $primary-colors-white: #fff;
     cursor: pointer;
   }
 }
+
+.no_tickets {
+  display: flex;
+  background-color: #ff6f32;
+  padding: 15px;
+  align-self: center;
+  text-align: center;
+  justify-content: space-around;
+  font-weight: 600;
+  color: $primary-colors-white;
+}

@@ -1,43 +1,62 @@
 import React from 'react'
 
+import { useAppSelector, useAppDispatch } from '../../store/hooks'
+import { changeFilterState } from '../../store/filterSlice'
+
 import classes from './filter.module.scss'
 
+const checkBox = [
+  {
+    name: 'Все',
+    transferAmount: 'all',
+  },
+  {
+    name: 'Без пересадок',
+    transferAmount: 'none',
+  },
+  {
+    name: '1 пересадка',
+    transferAmount: 'one',
+  },
+  {
+    name: '2 пересадки',
+    transferAmount: 'two',
+  },
+  {
+    name: '3 пересадки',
+    transferAmount: 'three',
+  },
+]
+
 export default function Filter() {
+  const filters = useAppSelector((state) => state.filters)
+  const dispatch = useAppDispatch()
+
+  const changeCheckbox = (value: boolean, type: string) => {
+    dispatch(changeFilterState({ value, type }))
+  }
+
   return (
     <form>
       <fieldset className={classes.filter}>
         <h1 className={classes.filter__header}>КОЛИЧЕСТВО ПЕРЕСАДОК</h1>
         <div className={classes.filter__wrapper}>
-          <div className={classes.filter__item}>
-            <input type="checkbox" id="transfer-all" className={classes.filter__checkbox} />
-            <label htmlFor="transfer-all" className={classes.filter__label}>
-              Все
-            </label>
-          </div>
-          <div className={classes.filter__item}>
-            <input type="checkbox" id="transfer-none" className={classes.filter__checkbox} />
-            <label htmlFor="transfer-none" className={classes.filter__label}>
-              Без пересадок
-            </label>
-          </div>
-          <div className={classes.filter__item}>
-            <input type="checkbox" id="transfer-one" className={classes.filter__checkbox} />
-            <label htmlFor="transfer-one" className={classes.filter__label}>
-              1 пересадка
-            </label>
-          </div>
-          <div className={classes.filter__item}>
-            <input type="checkbox" id="transfer-two" className={classes.filter__checkbox} />
-            <label htmlFor="transfer-two" className={classes.filter__label}>
-              2 пересадки
-            </label>
-          </div>
-          <div className={classes.filter__item}>
-            <input type="checkbox" id="transfer-three" className={classes.filter__checkbox} />
-            <label htmlFor="transfer-three" className={classes.filter__label}>
-              3 пересадки
-            </label>
-          </div>
+          {checkBox.map((filter) => (
+            <div key={filter.transferAmount} className={classes.filter__item}>
+              <input
+                className={classes.filter__checkbox}
+                type="checkbox"
+                id={`transfer-${filter.transferAmount}`}
+                checked={filters[filter.transferAmount as keyof typeof filters]}
+                onChange={() =>
+                  changeCheckbox(!filters[filter.transferAmount as keyof typeof filters], filter.transferAmount)
+                }
+              />
+              <label className={classes.filter__label} htmlFor={`transfer-${filter.transferAmount}`}>
+                {filter.name}
+              </label>
+            </div>
+          ))}
         </div>
       </fieldset>
     </form>
