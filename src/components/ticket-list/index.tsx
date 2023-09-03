@@ -73,7 +73,7 @@ export default function TicketList() {
           type="button"
           className={classes.ticket_list__button}
           onClick={() => {
-            setCount((num) => num + 5)
+            setCount((nums) => nums + 5)
           }}
           disabled={count > filteredTickets.length}
         >
